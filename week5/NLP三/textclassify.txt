@@ -1,0 +1,5 @@
+本次实验是在huggingface平台进行对豆瓣影评的分类进行实验。
+我们采用的是datasets的数据集下载豆瓣影评，由于我们要使用huggingface提供的预训练模型，因此tokenizer方法基于对应的预训练模型，直接使用autotokenizer进行保存。
+然后将文本toeken化并保存即可。
+接下来就是加载预训练模型，并对超参数进行设计，然后就是开始微调，完成两轮为微调后，将模型直接保存到huggingface（以权重方式保存），非常的简便。
+对模型进行测试也是较为简单，会输出对应标签和概率。使用model.config.id2label等即可输出我们想要的postive或者neg。
