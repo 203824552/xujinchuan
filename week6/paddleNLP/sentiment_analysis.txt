@@ -1,0 +1,3 @@
+情感分析（sentiment analysis）是近年来国内外研究的热点，旨在对带有情感色彩的主观性文本进行分析、处理、归纳和推理。情感分析具有广泛的应用场景，可以被应用于消费决策、舆情分析、个性化推荐等领域。
+按照分析粒度可以大致分为三类：篇章级的情感分析（Document-Level Sentiment Classification）、语句级的情感分析（Sentence-Level Sentiment Classification）和属性级的情感分析（Aspect-Level Sentiment Classification）。其中属性级的情感分析又包含多项子任务，例如属性抽取（Aspect Term Extraction）、观点抽取（Opinion Term Extraction）、属性级情感分析（Aspect-Based Sentiment Classification）等。
+本次尝试使用基于UIE的情感分析。还是同样的使用部分paddle提供的预训练模型进行尝试，使用uie-senta-base模型进行情感分析（01分布）正确率还是较好。也可以尝试进行属性级的情感分析改变一下schema的结构即可，最大的区别在于提供了三个选项，多了也一个未提及。同时paddle的UIE也提供了可视化方法，虽然只支持schema分析后的数据，但较为明显。鉴于在对业务数据进行情感分析时，往往聚焦于某个特定场景或领域，为满足用户更高的情感分析要求，本项目支持从以下方面协助用户，结合业务经验，进一步定制情感分析能力，提高模型对业务数据的理解和分析能力。经过微调和训练，也能达到较高的正确率，更贴近于现实的情况。
